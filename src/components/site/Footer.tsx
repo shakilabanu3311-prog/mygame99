@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-6 text-center">
           <a href="#home" className="group flex items-center gap-3">
             <LogoMark className="size-12 transition-transform duration-300 group-hover:scale-105" />
-            <span className="wordmark font-display text-2xl font-extrabold uppercase tracking-wide">
+            <span className="wordmark font-display text-[1.65rem] font-black uppercase tracking-[0.04em]">
               ALLROUNDER99
             </span>
           </a>

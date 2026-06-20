@@ -14,7 +14,7 @@ export function Navbar() {
           <LogoMark className="enter-zoom size-10 transition-transform duration-300 group-hover:scale-105" />
           <span
             aria-label="ALLROUNDER99"
-            className="wordmark font-display text-xl font-extrabold uppercase tracking-wide"
+            className="wordmark font-display text-[1.35rem] font-black uppercase tracking-[0.04em]"
           >
             {Array.from("ALLROUNDER99").map((ch, i) => (
               <span
