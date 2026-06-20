@@ -280,21 +280,28 @@
   50% { transform: translateY(-1.5px) scale(1.04); }
 }
 
-/* === Animated wordmark (ALLROUNDER99) === */
+/* === Animated wordmark (ALLROUNDER99) ===
+ * Gradient is applied PER LETTER so it survives the per-letter inline-block spans.
+ * The wordmark wrapper sets a CSS var for the shared gradient.
+ */
 .wordmark {
-  position: relative;
-  background: linear-gradient(
+  --wm-gradient: linear-gradient(
     100deg,
     oklch(0.97 0.01 200) 0%,
     oklch(0.7 0.13 200) 35%,
     oklch(0.81 0.13 82) 55%,
     oklch(0.97 0.01 200) 80%
   );
+  color: oklch(0.97 0.01 200);
+}
+.wordmark .letter-in {
+  background: var(--wm-gradient);
   background-size: 220% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: wordmark-shine 4.5s linear infinite;
+  animation: letter-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both,
+             wordmark-shine 4.5s linear 1.5s infinite;
 }
 @keyframes wordmark-shine {
   to { background-position: -220% center; }
