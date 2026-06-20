@@ -12,8 +12,20 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <a href="#home" className="group flex items-center gap-2.5">
           <LogoMark className="enter-zoom size-10 transition-transform duration-300 group-hover:scale-105" />
-          <span className="wordmark enter-fade-right delay-200 font-display text-xl font-extrabold uppercase tracking-wide">
-            ALLROUNDER99
+          <span
+            aria-label="ALLROUNDER99"
+            className="wordmark font-display text-xl font-extrabold uppercase tracking-wide"
+          >
+            {Array.from("ALLROUNDER99").map((ch, i) => (
+              <span
+                key={i}
+                aria-hidden
+                className="letter-in inline-block"
+                style={{ animationDelay: `${0.25 + i * 0.07}s` }}
+              >
+                {ch}
+              </span>
+            ))}
           </span>
         </a>
 
