@@ -7,10 +7,10 @@ export function Footer() {
     <footer className="border-t border-border/60 bg-background">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
         <div className="flex flex-col items-center gap-6 text-center">
-          <a href="#home" className="flex items-center gap-3">
-            <LogoMark className="size-12" />
-            <span className="font-display text-2xl font-extrabold uppercase tracking-wide">
-              AllRounder<span className="text-primary">99</span>
+          <a href="#home" className="group flex items-center gap-3">
+            <LogoMark className="size-12 transition-transform duration-300 group-hover:scale-105" />
+            <span className="wordmark font-display text-2xl font-extrabold uppercase tracking-wide">
+              ALLROUNDER99
             </span>
           </a>
           <p className="max-w-md text-sm text-muted-foreground">{brand.tagline}</p>
