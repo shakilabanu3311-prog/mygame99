@@ -1,0 +1,72 @@
+import { useState } from "react";
+import { Menu, X, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { links, nav } from "@/lib/site-config";
+import { LogoMark } from "@/components/site/LogoMark";
+
+export function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
+        <a href="#home" className="flex items-center gap-2.5">
+          <LogoMark className="size-10" />
+          <span className="font-display text-xl font-extrabold uppercase tracking-wide">
+            AllRounder<span className="text-primary">99</span>
+          </span>
+        </a>
+
+        <nav className="hidden items-center gap-8 md:flex">
+          {nav.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="font-display text-sm font-semibold uppercase tracking-wide text-muted-foreground transition-colors hover:text-primary"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden md:block">
+          <Button asChild variant="hero" size="lg" className="btn-shimmer animate-blink">
+            <a href={links.whatsapp} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="size-4" /> Get ID Now
+            </a>
+          </Button>
+        </div>
+
+        <button
+          className="inline-flex size-10 items-center justify-center rounded-md text-foreground md:hidden"
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {open ? <X /> : <Menu />}
+        </button>
+      </div>
+
+      {open && (
+        <div className="border-t border-border/60 bg-background/95 px-4 py-4 md:hidden">
+          <nav className="flex flex-col gap-1">
+            {nav.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-3 py-2.5 font-display text-sm font-semibold uppercase tracking-wide text-muted-foreground hover:bg-secondary hover:text-primary"
+              >
+                {item.label}
+              </a>
+            ))}
+            <Button asChild variant="hero" size="lg" className="btn-shimmer animate-blink mt-2 w-full">
+              <a href={links.whatsapp} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="size-4" /> Get ID Now
+              </a>
+            </Button>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}
