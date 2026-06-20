@@ -11,8 +11,8 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <a href="#home" className="group flex items-center gap-2.5">
-          <LogoMark className="size-10 transition-transform duration-300 group-hover:scale-105" />
-          <span className="wordmark font-display text-xl font-extrabold uppercase tracking-wide">
+          <LogoMark className="enter-zoom size-10 transition-transform duration-300 group-hover:scale-105" />
+          <span className="wordmark enter-fade-right delay-200 font-display text-xl font-extrabold uppercase tracking-wide">
             ALLROUNDER99
           </span>
         </a>

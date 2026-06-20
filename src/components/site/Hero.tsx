@@ -23,24 +23,24 @@ export function Hero() {
 
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:py-36">
         <div className="max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-widest text-primary">
+          <span className="enter-fade-up inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-widest text-primary">
             🔥 India's No.1 Choice
           </span>
 
-          <h1 className="mt-6 font-display text-5xl font-extrabold uppercase leading-[0.95] sm:text-6xl lg:text-7xl">
+          <h1 className="enter-fade-up delay-200 mt-6 font-display text-5xl font-extrabold uppercase leading-[0.95] sm:text-6xl lg:text-7xl">
             Play Bold.
             <br />
             Win <span className="text-gradient-gold">Big.</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-lg text-muted-foreground">
+          <p className="enter-fade-up delay-400 mt-5 max-w-xl text-lg text-muted-foreground">
             {brand.name} brings you <span className="text-foreground font-semibold">Sports Betting</span>,{" "}
             <span className="text-foreground font-semibold">Live Casino</span> &amp;{" "}
             <span className="text-foreground font-semibold">Cricket IDs</span> — instant deposit, fast
             withdrawal and 24/7 support on one trusted platform.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="enter-fade-up delay-500 mt-8 flex flex-wrap gap-4">
             <Button asChild variant="hero" size="xl">
               <a href={links.telegram} target="_blank" rel="noopener noreferrer">
                 <Send className="size-5" /> Get Your ID Now
@@ -51,7 +51,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3">
+          <div className="enter-fade-up delay-700 mt-10 flex flex-wrap gap-x-6 gap-y-3">
             {badges.map((b) => (
               <div key={b.label} className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
                 <b.icon className="size-4 text-primary" />
