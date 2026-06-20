@@ -1,6 +1,7 @@
-import { Send, Instagram, Facebook, MessageCircle, ExternalLink } from "lucide-react";
+import { Send, Instagram, Facebook, ExternalLink } from "lucide-react";
 import { brand, links, nav, products } from "@/lib/site-config";
 import { LogoMark } from "@/components/site/LogoMark";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export function Footer() {
   return (
@@ -43,10 +44,10 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
             {[
-              { href: links.whatsapp, icon: MessageCircle, label: "WhatsApp" },
-              { href: links.instagram, icon: Instagram, label: "Instagram" },
-              { href: links.facebook, icon: Facebook, label: "Facebook" },
-              { href: links.telegram, icon: Send, label: "Telegram" },
+              { href: links.whatsapp, icon: WhatsAppIcon, label: "WhatsApp", cls: "social-wa" },
+              { href: links.instagram, icon: Instagram, label: "Instagram", cls: "social-ig" },
+              { href: links.facebook, icon: Facebook, label: "Facebook", cls: "social-fb" },
+              { href: links.telegram, icon: Send, label: "Telegram", cls: "social-tg" },
             ].map((s) => (
               <a
                 key={s.label}
@@ -54,7 +55,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="flex size-11 items-center justify-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className={`${s.cls} flex size-11 items-center justify-center rounded-full transition-all`}
               >
                 <s.icon className="size-5" />
               </a>

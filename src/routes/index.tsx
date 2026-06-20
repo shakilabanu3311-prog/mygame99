@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { Hero } from "@/components/site/Hero";
 import { Marquee } from "@/components/site/Marquee";
 import { Products } from "@/components/site/Products";
@@ -48,10 +48,10 @@ function Index() {
         href={links.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Get your ID on WhatsApp"
-        className="fixed bottom-4 right-4 z-50 inline-flex items-center gap-1.5 rounded-full bg-gradient-whatsapp px-3.5 py-2 font-display text-xs font-bold uppercase tracking-wide text-primary-foreground shadow-card transition-transform hover:scale-105 sm:bottom-5 sm:right-5 sm:px-4 sm:py-2.5 sm:text-sm"
+        aria-label="Chat on WhatsApp"
+        className="float-whatsapp fixed bottom-5 right-5 z-50 grid size-14 place-items-center rounded-full bg-[#25D366] text-white shadow-card ring-2 ring-white/20 transition-transform hover:scale-110 sm:size-16"
       >
-        <MessageCircle className="size-4" /> Get ID
+        <WhatsAppIcon className="size-7 sm:size-8" />
       </a>
     </div>
   );

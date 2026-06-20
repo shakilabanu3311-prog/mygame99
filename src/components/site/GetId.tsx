@@ -1,6 +1,7 @@
-import { Send, MessageCircle, Instagram, Facebook, ExternalLink } from "lucide-react";
+import { Send, Instagram, Facebook, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { brand, links, products } from "@/lib/site-config";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 const steps = [
   { num: "01", title: "Message Us", desc: "Tap the button and message us on Telegram or WhatsApp." },
@@ -48,7 +49,7 @@ export function GetId() {
             <div className="mt-7 flex flex-col gap-3">
               <Button asChild variant="brand" size="xl" className="btn-shimmer animate-blink w-full">
                 <a href={links.whatsapp} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="size-5" /> Get ID on WhatsApp
+                  <WhatsAppIcon className="size-5" /> Get ID on WhatsApp
                 </a>
               </Button>
               <Button asChild variant="hero" size="xl" className="btn-shimmer w-full">
@@ -74,11 +75,20 @@ export function GetId() {
 
             <div className="mt-6 flex items-center justify-center gap-4">
               <a
+                href={links.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="social-wa flex size-11 items-center justify-center rounded-full transition-all"
+              >
+                <WhatsAppIcon className="size-5" />
+              </a>
+              <a
                 href={links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex size-11 items-center justify-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className="social-ig flex size-11 items-center justify-center rounded-full transition-all"
               >
                 <Instagram className="size-5" />
               </a>
@@ -87,7 +97,7 @@ export function GetId() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex size-11 items-center justify-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className="social-fb flex size-11 items-center justify-center rounded-full transition-all"
               >
                 <Facebook className="size-5" />
               </a>
@@ -96,7 +106,7 @@ export function GetId() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Telegram"
-                className="flex size-11 items-center justify-center rounded-full border border-border/60 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                className="social-tg flex size-11 items-center justify-center rounded-full transition-all"
               >
                 <Send className="size-5" />
               </a>
