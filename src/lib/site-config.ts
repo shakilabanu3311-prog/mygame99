@@ -20,15 +20,6 @@ export const links = {
 /** The two betting platforms we provide IDs for. */
 export const products = [
   {
-    name: "Rajahuli99",
-    logo: rajahuliLogo,
-    url: "https://rajahuli99.com",
-    site: "rajahuli99.com",
-    deposit: "₹100",
-    tagline: "Royal Sports Exchange & Live Casino",
-    blurb: "Premium cricket & casino exchange with the best odds in India.",
-  },
-  {
     name: "AllRounder99",
     logo: allrounderMark,
     url: "https://www.allrounder99.com",
@@ -36,6 +27,15 @@ export const products = [
     deposit: "₹100",
     tagline: "Sports Betting • Live Casino • Cricket ID",
     blurb: "Instant IDs, fast withdrawals & 24/7 support on every market.",
+  },
+  {
+    name: "Rajahuli99",
+    logo: rajahuliLogo,
+    url: "https://rajahuli99.com",
+    site: "rajahuli99.com",
+    deposit: "₹100",
+    tagline: "Royal Sports Exchange & Live Casino",
+    blurb: "Premium cricket & casino exchange with the best odds in India.",
   },
 ];
 
