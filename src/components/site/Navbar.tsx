@@ -21,7 +21,7 @@ export function Navbar() {
                 key={i}
                 aria-hidden
                 className="letter-in inline-block"
-                style={{ animationDelay: `${0.25 + i * 0.07}s` }}
+                style={{ animationDelay: `${0.15 + i * 0.06}s` }}
               >
                 {ch}
               </span>
