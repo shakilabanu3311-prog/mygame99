@@ -1,6 +1,6 @@
-import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { links } from "@/lib/site-config";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import cricket from "@/assets/cricket.jpg";
 import casino from "@/assets/casino.jpg";
 import liveDealer from "@/assets/live-dealer.jpg";
@@ -55,8 +55,8 @@ export function Categories() {
 
       <div className="mt-12 text-center">
         <Button asChild variant="brand" size="xl">
-          <a href={links.telegram} target="_blank" rel="noopener noreferrer">
-            <Send className="size-5" /> Start Playing Now
+          <a href={links.whatsapp} target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon className="size-5" /> Start Playing Now
           </a>
         </Button>
       </div>

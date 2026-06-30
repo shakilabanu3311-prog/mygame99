@@ -1,6 +1,7 @@
-import { Send, Zap, ShieldCheck, Star } from "lucide-react";
+import { Zap, ShieldCheck, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { brand, links } from "@/lib/site-config";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const badges = [
@@ -42,8 +43,8 @@ export function Hero() {
 
           <div className="enter-fade-up delay-500 mt-8 flex flex-wrap gap-4">
             <Button asChild variant="hero" size="xl">
-              <a href={links.telegram} target="_blank" rel="noopener noreferrer">
-                <Send className="size-5" /> Get Your ID Now
+              <a href={links.whatsapp} target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon className="size-5" /> Get Your ID Now
               </a>
             </Button>
             <Button asChild variant="heroOutline" size="xl">
