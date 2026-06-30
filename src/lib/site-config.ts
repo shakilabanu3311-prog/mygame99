@@ -11,7 +11,7 @@ export const brand = {
 };
 
 export const links = {
-  telegram: "https://t.me/all_rounder99",
+  telegram: "https://t.me/+8MNDX3Ijt7RjM2E1",
   instagram: "https://www.instagram.com/offical_allrounder99",
   facebook: "https://www.facebook.com/share/1UJfGG72FU/",
   whatsapp: "https://go.wa.link/allrounder99",
